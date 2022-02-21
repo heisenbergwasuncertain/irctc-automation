@@ -24,7 +24,7 @@ class BookingGui(Frame, object):
         """
         for label_index, label_value in zip(range(1, 10), self.label):
             Label(self, text=label_value).grid(row=label_index, column=0)
-            self.entry[label_value] = Entry(self, show="*") if label_value is "Password" else Entry(self)
+            self.entry[label_value] = Entry(self, show="*") if label_value == "Password" else Entry(self)
             self.entry[label_value].grid(row=label_index, column=1)
         for passenger_index, passenger_label in zip(range(0, 5), self.passanger):
             Label(self, text=passenger_label).grid(row=label_index + 1, column=passenger_index)
@@ -59,7 +59,7 @@ class Booking(object):
 
     def main(self):
         """
-        It will be having main script for crome automation
+        It will be having main script for chrome automation
         """
         try:
             self.browser = webdriver.Chrome()
@@ -106,15 +106,4 @@ if __name__ == '__main__':
     BOOKING.main_gui()
     BOOKING.pack(side=LEFT)
     ROOT.mainloop()
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
